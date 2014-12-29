@@ -1,0 +1,146 @@
+<div class="product-buttons">
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-s"><span class="uk-icon-eye"></span> &nbsp;View Demo</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-o"><span class="uk-icon-shopping-cart"></span> &nbsp;Purchase It</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-n"><span class="uk-icon-support"></span> &nbsp;Get Help</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-i"><span class="uk-icon-bullhorn"></span> &nbsp; Review</a>
+    </div>
+</div>
+<div class="uk-grid">
+    <div class="uk-width-medium-2-5">
+        <h3>
+            About this product:
+        </h3>
+        <p>JUsertube is a Joomla Extension for showing your Youtube videos on your website as a gallery/album. It shows the thumbs as a preview and shows the video when the thumbs are clicked. Videos can be displayed on a lightbox or an embedded player (in some layout). You can also display the title and description of each video (layout dependent).
+        </p>
+        <h3>
+            System Requirements
+        </h3>
+        <ul>
+            <li>Joomla installation with proper directory permission and JavaScript error free frontend</li>
+            <li>PHP 5</li>
+            <li><code>php5-curl</code> library installed or enabled or <code>allow_url_fopen</code> turned on in php.ini file</li>
+        </ul>
+        <h3>
+            Supported Sources
+        </h3>
+        <ul>
+            <li>Youtube Channel/User's Uploads (not necessarily your upload)</li>
+            <li>Youtube Playlist (not necessarily your upload)</li>
+            <li>Youtube Channel/User's Subscribed Videos (not necessarily your upload)</li>
+        </ul>
+        <h3>
+            Supported Joomla Versions
+        </h3>
+        <ul>
+            <li>Joomla 3.x</li>
+            <li>Joomla 2.5</li>
+        </ul>
+
+    </div>
+    <div class="uk-width-medium-3-5">
+        <input type="text" id="jus-search" value="" class="form-control uk-width-1-1 table-filter" placeholder="Type to filter">
+        <table class="features table table-striped table-bordered">
+            <tbody>
+            <tr>
+                <th width="50%" scope="row">Fully Responsive</th>
+                <td width="50%"><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Number of columns for large devices</th>
+                <td>Customizable</td>
+            </tr>
+            <tr>
+                <th scope="row">Number of columns for small devices</th>
+                <td>Customizable</td>
+            </tr>
+            <tr>
+                <th scope="row">Number of Layouts</th>
+                <td>2 for Menu Items, 4 for Module</td>
+            </tr>
+            <tr>
+                <th scope="row">Video On Lightbox</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Video On Page</th>
+                <td>Only with some layouts</td>
+            </tr>
+            <tr>
+                <th scope="row">Auto Syncing</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Auto Syncing Interval</th>
+                <td>Adjustable (default: 10H)</td>
+            </tr>
+            <tr>
+                <th scope="row">Manual syncing (for immediate syncing)</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Can use on Unlimited Sites</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Can use for Unlimited period</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Free Update</th>
+                <td>1 Year</td>
+            </tr>
+            <tr>
+                <th scope="row">Free Support</th>
+                <td>1 Year (for 1 website)</td>
+            </tr>
+            <tr>
+                <th scope="row">Youtube Sources</th>
+                <td>Uploads, Subscriptions, Playlists</td>
+            </tr>
+            <tr>
+                <th scope="row">Sorting Videos</th>
+                <td>Playlists only (re-sync required)</td>
+            </tr>
+            <tr>
+                <th scope="row">Max Videos per Channel, Playlist, Subscription</th>
+                <td>As set by YouTube (1000 for uploads/playlists, 100 for subscriptions)</td>
+            </tr>
+            <tr>
+                <th scope="row">Vimeo and other video sources</th>
+                <td><span class="uk-icon-times  srz-red"></span> No</td>
+            </tr>
+            <tr>
+                <th scope="row">Videos Searchable</th>
+                <td><span class="uk-icon-times  srz-red"></span> No</td>
+            </tr>
+            <tr>
+                <th scope="row">Like Counter Increment</th>
+                <td><span class="uk-icon-times  srz-red"></span> No</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    jQuery(document).ready(function(){
+        jQuery( '.features' ).searchable({
+            striped: true,
+            searchField: '#jus-search',
+            searchType: 'default',
+            childSelector: 'th, td',
+            show: function( elem ) {
+                elem.fadeIn( 300 );
+            },
+            hide: function( elem ) {
+                elem.fadeOut( 300 );
+            }
+        });
+    });
+</script>
