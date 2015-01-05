@@ -1,0 +1,96 @@
+<div class="product-buttons uk-clearfix">
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-s"><span class="uk-icon-eye"></span> &nbsp;View Demo</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-o"><span class="uk-icon-download"></span> &nbsp;Download</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-n"><span class="uk-icon-support"></span> &nbsp;Get Help</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-i"><span class="uk-icon-bullhorn"></span> &nbsp; Review</a>
+    </div>
+</div>
+<div class="uk-grid">
+    <div class="uk-width-medium-1-2">
+        <h3>
+            About this product:
+        </h3>
+
+        <p>This Joomla Module displays a nice looking image slider in your site. You can use it for Front Page Slideshow or as an Image Gallery for your Joomla site. It can be customized heavily with the module parameters to match your needs. Multiple copy of the module can be loaded on the same page with different settings or styles without making any conflict
+        </p>
+        <p></p>
+    </div>
+    <div class="uk-width-medium-1-2">
+        <h3>
+            System Requirements
+        </h3>
+        <ul>
+            <li>Joomla installation (any version) with JavaScript error free frontend</li>
+            <li>Modern web browser (latest version of any browser)</li>
+        </ul>
+        <p></p>
+    </div>
+    <div class="uk-width-medium-1-1">
+        <h3>Feature Table</h3>
+        <input type="text" id="jus-search" value="" class="form-control uk-width-1-1 table-filter"
+               placeholder="Type to filter">
+        <table class="features table table-striped table-bordered">
+            <tbody>
+            <tr>
+                <th scope="row">Transition Effect</th>
+                <td>Sliding (many types)</td>
+            </tr>
+            <tr>
+                <th scope="row">Slide Speed and Style</th>
+                <td>Customizable</td>
+            </tr>
+            <tr>
+                <th scope="row">Background</th>
+                <td>10 seamless background provided</td>
+            </tr>
+            <tr>
+                <th scope="row">Auto Slide</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes (Can be turned on/off)</td>
+            </tr>
+            <tr>
+                <th scope="row">Background Sliding</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes (parallax effect)</td>
+            </tr>
+            <tr>
+                <th scope="row">Overlay Text</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes (HTML supported)</td>
+            </tr>
+            <tr>
+                <th scope="row">Can use on Unlimited Sites</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Can use for Unlimited period</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Support</th>
+                <td>Documentation is free. For pro support you need to pay per hour basis.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    jQuery(document).ready(function () {
+        jQuery('.features').searchable({
+            striped: true,
+            searchField: '#jus-search',
+            searchType: 'default',
+            childSelector: 'th, td',
+            show: function (elem) {
+                elem.fadeIn(300);
+            },
+            hide: function (elem) {
+                elem.fadeOut(300);
+            }
+        });
+    });
+</script>

@@ -1,0 +1,125 @@
+<div class="product-buttons uk-clearfix">
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-s"><span class="uk-icon-eye"></span> &nbsp;View Demo</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-o"><span class="uk-icon-shopping-cart"></span> &nbsp;Purchase It</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-n"><span class="uk-icon-support"></span> &nbsp;Get Help</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-i"><span class="uk-icon-bullhorn"></span> &nbsp; Review</a>
+    </div>
+</div>
+<div class="uk-grid">
+    <div class="uk-width-medium-1-2">
+        <h3>
+            About this product:
+        </h3>
+
+        <p>This Joomla extension displays Facebook Page (also called Fanpage) albums into your joomla website as a gallery or individual albums. Use the powerful servers of Facebook to host and administer your photos and use this extension to display them on your site.
+        </p>
+        <p></p>
+    </div>
+    <div class="uk-width-medium-1-2">
+
+        <h3>
+            System Requirements
+        </h3>
+        <ul>
+            <li>Joomla installation with proper directory permission and JavaScript error free frontend</li>
+            <li>PHP 5</li>
+            <li><code>php5-curl</code> library installed or enabled or <code>allow_url_fopen</code> turned on in
+                php.ini
+                file
+            </li>
+        </ul>
+        <p></p>
+    </div>
+    <div class="uk-width-medium-1-1">
+        <h3>Feature Table</h3>
+        <input type="text" id="jus-search" value="" class="form-control uk-width-1-1 table-filter"
+               placeholder="Type to filter">
+        <table class="features table table-striped table-bordered">
+            <tbody>
+            <tr>
+                <th width="50%" scope="row">Responsiveness</th>
+                <td width="50%">Some Layouts and the lightbox are responsive</td>
+            </tr>
+            <tr>
+                <th scope="row">Number of Layouts</th>
+                <td>2 for Menu Items, 3 for Module</td>
+            </tr>
+            <tr>
+                <th scope="row">Built in responsive Lightbox</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Auto Syncing</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Auto Syncing Interval</th>
+                <td>Adjustable (default: 10H)</td>
+            </tr>
+            <tr>
+                <th scope="row">Manual syncing (for immediate syncing)</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Can use on Unlimited Sites</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Can use for Unlimited period</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Free Update</th>
+                <td>1 Year</td>
+            </tr>
+            <tr>
+                <th scope="row">Free Support</th>
+                <td>1 Year (for 1 website)</td>
+            </tr>
+            <tr>
+                <th scope="row">Supported Album Sources</th>
+                <td>Only Unrestricted Public Pages (also called fanpage)</td>
+            </tr>
+            <tr>
+                <th scope="row">Unsupported Sources</th>
+                <td><span class="uk-icon-times  srz-red"></span> Personal Profile and groups</td>
+            </tr>
+            <tr>
+                <th scope="row">Sorting Album Covers</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Sorting Images</th>
+                <td><span class="uk-icon-check srz-green"></span> Yes</td>
+            </tr>
+            <tr>
+                <th scope="row">Max Images per album</th>
+                <td>Up to 8000 tested (larger albums require more server memory and inbound net speed)</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    jQuery(document).ready(function () {
+        jQuery('.features').searchable({
+            striped: true,
+            searchField: '#jus-search',
+            searchType: 'default',
+            childSelector: 'th, td',
+            show: function (elem) {
+                elem.fadeIn(300);
+            },
+            hide: function (elem) {
+                elem.fadeOut(300);
+            }
+        });
+    });
+</script>

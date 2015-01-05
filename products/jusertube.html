@@ -1,4 +1,4 @@
-<div class="product-buttons">
+<div class="product-buttons uk-clearfix">
     <div class="srz-width-1-4">
         <a href="#" class="uk-button button-srizon-s"><span class="uk-icon-eye"></span> &nbsp;View Demo</a>
     </div>
@@ -13,39 +13,37 @@
     </div>
 </div>
 <div class="uk-grid">
-    <div class="uk-width-medium-2-5">
+    <div class="uk-width-medium-1-2">
         <h3>
             About this product:
         </h3>
-        <p>JUsertube is a Joomla Extension for showing your Youtube videos on your website as a gallery/album. It shows the thumbs as a preview and shows the video when the thumbs are clicked. Videos can be displayed on a lightbox or an embedded player (in some layout). You can also display the title and description of each video (layout dependent).
+
+        <p>JUsertube is a Joomla Extension for showing your Youtube videos on your website as a gallery/album. It shows
+            the thumbs as a preview and shows the video when the thumbs are clicked. Videos can be displayed on a
+            lightbox or an embedded player (in some layout). You can also display the title and description of each
+            video (layout dependent).
         </p>
+        <p></p>
+    </div>
+    <div class="uk-width-medium-1-2">
+
         <h3>
             System Requirements
         </h3>
         <ul>
             <li>Joomla installation with proper directory permission and JavaScript error free frontend</li>
             <li>PHP 5</li>
-            <li><code>php5-curl</code> library installed or enabled or <code>allow_url_fopen</code> turned on in php.ini file</li>
+            <li><code>php5-curl</code> library installed or enabled or <code>allow_url_fopen</code> turned on in
+                php.ini
+                file
+            </li>
         </ul>
-        <h3>
-            Supported Sources
-        </h3>
-        <ul>
-            <li>Youtube Channel/User's Uploads (not necessarily your upload)</li>
-            <li>Youtube Playlist (not necessarily your upload)</li>
-            <li>Youtube Channel/User's Subscribed Videos (not necessarily your upload)</li>
-        </ul>
-        <h3>
-            Supported Joomla Versions
-        </h3>
-        <ul>
-            <li>Joomla 3.x</li>
-            <li>Joomla 2.5</li>
-        </ul>
-
+        <p></p>
     </div>
-    <div class="uk-width-medium-3-5">
-        <input type="text" id="jus-search" value="" class="form-control uk-width-1-1 table-filter" placeholder="Type to filter">
+    <div class="uk-width-medium-1-1">
+        <h3>Feature Table</h3>
+        <input type="text" id="jus-search" value="" class="form-control uk-width-1-1 table-filter"
+               placeholder="Type to filter">
         <table class="features table table-striped table-bordered">
             <tbody>
             <tr>
@@ -129,17 +127,17 @@
     </div>
 </div>
 <script>
-    jQuery(document).ready(function(){
-        jQuery( '.features' ).searchable({
+    jQuery(document).ready(function () {
+        jQuery('.features').searchable({
             striped: true,
             searchField: '#jus-search',
             searchType: 'default',
             childSelector: 'th, td',
-            show: function( elem ) {
-                elem.fadeIn( 300 );
+            show: function (elem) {
+                elem.fadeIn(300);
             },
-            hide: function( elem ) {
-                elem.fadeOut( 300 );
+            hide: function (elem) {
+                elem.fadeOut(300);
             }
         });
     });

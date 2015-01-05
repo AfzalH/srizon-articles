@@ -1,0 +1,97 @@
+<div class="product-buttons uk-clearfix">
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-n"><span class="uk-icon-book"></span> &nbsp;Learn More</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-s"><span class="uk-icon-eye"></span> &nbsp;View Demo</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-o"><span class="uk-icon-shopping-cart"></span> &nbsp;Purchase It</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-i"><span class="uk-icon-envelope"></span> &nbsp; Contact</a>
+    </div>
+</div>
+<div class="uk-grid">
+    <h3>First Go through this doc for any clarification or issue. If this doesn't help then contact us.</h3>
+    <div class="uk-width-medium-1-2">
+        <p></p>
+        <h4>Troubleshooting Related</h4>
+        <input type="text" id="trouble-search" value="" class="form-control uk-width-1-1 table-filter"
+               placeholder="Type to filter">
+        <table class="troubleshoot table table-striped table-bordered">
+            <tbody>
+            <tr>
+                <td>
+                    <strong>Installation Failed</strong>
+                    <p>Make Sure the directory permissions are ok</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p></p>
+    </div>
+
+    <div class="uk-width-medium-1-2">
+        <p></p>
+        <h4>Installation/Setup Related</h4>
+        <input type="text" id="ins-search" value="" class="form-control uk-width-1-1 table-filter"
+               placeholder="Type to filter">
+        <table class="installation table table-striped table-bordered">
+            <tbody>
+            <tr>
+                <td>
+                    <strong>Installation for Joomla 3.x</strong>
+                    <ol>
+                        <li>Login to admin area</li>
+                        <li>Go to -> Extensions -> Extension Manager</li>
+                        <li>Under 'Upload Package File' Point the downloaded package and click Upload & Install</li>
+                        <li>Alternatively You can also install directly using the download URL by using 'Install from URL' tab (server dependent)</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Installation for Joomla 2.5.x</strong>
+                    <ol>
+                        <li>Login to admin area</li>
+                        <li>Go to -> Extensions -> Extension Manager</li>
+                        <li>Under 'Upload Package File' Point the downloaded package and click Upload & Install</li>
+                        <li>Alternatively You can also install directly using the download URL by using 'Install from URL' part (server dependent)</li>
+                    </ol>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p></p>
+    </div>
+</div>
+<script>
+    jQuery(document).ready(function () {
+        jQuery('.troubleshoot').searchable({
+            striped: true,
+            searchField: '#trouble-search',
+            searchType: 'default',
+            childSelector: 'td',
+            show: function (elem) {
+                elem.fadeIn(300);
+            },
+            hide: function (elem) {
+                elem.fadeOut(300);
+            }
+        });
+
+        jQuery('.installation').searchable({
+            striped: true,
+            searchField: '#ins-search',
+            searchType: 'default',
+            childSelector: 'td',
+            show: function (elem) {
+                elem.fadeIn(300);
+            },
+            hide: function (elem) {
+                elem.fadeOut(300);
+            }
+        });
+    });
+</script>
