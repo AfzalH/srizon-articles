@@ -9,13 +9,13 @@
         <a href="#" class="uk-button button-srizon-o"><span class="uk-icon-shopping-cart"></span> &nbsp;Purchase It</a>
     </div>
     <div class="srz-width-1-4">
-        <a href="#" class="uk-button button-srizon-i"><span class="uk-icon-envelope"></span> &nbsp; Contact</a>
+        <a href="#" class="uk-button button-srizon-i"><span class="uk-icon-envelope"></span> &nbsp;Contact</a>
     </div>
     <div class="srz-width-1-4">
         <a href="#" class="uk-button button-srizon-s"><span class="uk-icon-download"></span> &nbsp;Download</a>
     </div>
     <div class="srz-width-1-4">
-        <a href="#" class="uk-button button-srizon-i"><span class="uk-icon-bullhorn"></span> &nbsp; Review</a>
+        <a href="#" class="uk-button button-srizon-i"><span class="uk-icon-bullhorn"></span> &nbsp;Review</a>
     </div>
 </div>
 <div class="uk-grid">
@@ -26,7 +26,7 @@
         <h4>Installation/Setup Related</h4>
         <input type="text" id="ins-search" value="" class="form-control uk-width-1-1 table-filter"
                placeholder="Type to filter">
-        <table class="installation table table-striped table-bordered">
+        <table class="installation table table-bordered">
             <tbody>
             <tr>
                 <td>
@@ -50,7 +50,7 @@
                         <li>OR click New and under 'Select a Module Type:' select JFBAlbum to add a new instance of the module.</li>
                         <li>Set the Details and Menu Assignment like any other module.</li>
                         <li>Set the parameters of the module.</li>
-                        <li>Set The AlbumIDs and other parameters.</li>
+                        <li>Set The AlbumIDs (<a data-uk-smooth-scroll href="#getting-album-id">How to get?</a>) and other parameters.</li>
                     </ol>
                 </td>
             </tr>
@@ -65,7 +65,7 @@
                         <li>Set the Details like any other menu.</li>
                         <li>Set the parameters of the menu (Joomla 2.5.x).</li>
                         <li>Set JFBAlbum related parameters from 'Advanced Options' tab (Joomla 3.x).</li>
-                        <li>Set The AlbumIDs and other parameters.</li>
+                        <li>Set The Album IDs (<a data-uk-smooth-scroll href="#getting-album-id">How to get?</a>) and other parameters.</li>
                     </ol>
                 </td>
             </tr>
@@ -81,7 +81,30 @@
                         <li>Set the Details like any other menu.</li>
                         <li>Set the parameters of the menu (Joomla 2.5.x).</li>
                         <li>Set JFBAlbum related parameters from 'Advanced Options' tab (Joomla 3.x).</li>
-                        <li>Set the PageID and other parameters.</li>
+                        <li>Set the PageID (<a data-uk-smooth-scroll href="#getting-page-id">How to get?</a>) and other parameters.</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong id="getting-album-id">Getting Album ID</strong>
+                    <ol>
+                        <li>Visit your Facebook Page</li>
+                        <li>Go to Photos->Albums</li>
+                        <li>Go to an album</li>
+                        <li>The URL (link) of the album should be like this <pre>https://www.facebook.com/media/set/?set=a.434654226025.235247.64822581025&type=3</pre></li>
+                        <li>The number after a. is the album id. For the link above it's <pre>434654226025</pre></li>
+                        <li>You may also enter the whole URL (link) as album it. However, it may not work if the URL structure changes</li>
+                    </ol>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong id="getting-page-id">Getting Page ID (for creating a Gallery)</strong>
+                    <ol>
+                        <li>If you page URL (link) is <pre>http://www.facebook.com/pages/sometext/number</pre> then the PageID is the <pre>number</pre> You'll get this type of URL (link) if you haven't chosen an unique username for your page</li>
+                        <li>if your page URL is <pre>http://www.facebook.com/name</pre> then the PageID is the <pre>name</pre></li>
                     </ol>
                 </td>
             </tr>
@@ -94,12 +117,50 @@
         <h4>Troubleshooting Related</h4>
         <input type="text" id="trouble-search" value="" class="form-control uk-width-1-1 table-filter"
                placeholder="Type to filter">
-        <table class="troubleshoot table table-striped table-bordered">
+        <table class="troubleshoot table table-bordered">
             <tbody>
             <tr>
                 <td>
                     <strong>Installation Failed</strong>
                     <p>Make Sure the directory permissions are ok</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Setup Ok. But nothing show on the frontend</strong>
+                    <p>Make Sure all of the following are checked</p>
+                    <ol>
+                        <li>You already tested your target server/site with the server test module</li>
+                        <li>The album id or page id is from a public page on Facebook (not a personal profile where you add friend or a group)</li>
+                        <li>Your page is published</li>
+                        <li>Your page doesn't have any country/age restriction</li>
+                        <li>Your page isn't categorized under alcohol/nightclub etc adult category</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Lightbox and/or Slider is not working</strong>
+                    <p>Most probably a JavaScript error occurred due to another extension or your template. Make sure your frontend is JavaScript error free. In a plug and play system it's important to check for JavaScript error after installation of each extension. You'll have to disable the conflicting extension if you're not able to resolve the conflict. </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>I just updated something on Facebook a album but it's not showing on my site</strong>
+                    You need to wait for the next sync. Sync interval can be adjusted from the backend parameter. You can also do a force re-sync to see immediate result (admin menu->components->jfbalbum->sync now)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>How to remove restrictions from a Facebook Page</strong>
+                    <ol>
+                        <li>visit the facebook page as an admin user</li>
+                        <li>click edit page -> edit settings</li>
+                        <li>remove any restrictions (age / country etc)</li>
+                        <li>if the page is categorized under bar / alcohol related then remove as well</li>
+                        <li>after saving the changes try to load your page as 'logged-out' user (without loggin in) if it loads then it's ready</li>
+                        <li>force re-sync (admin menu->components->jfbalbum->sync now)</li>
+                    </ol>
                 </td>
             </tr>
             </tbody>
