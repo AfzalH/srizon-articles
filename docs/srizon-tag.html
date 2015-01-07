@@ -35,7 +35,7 @@
                         <li>Login to admin area</li>
                         <li>Go to -> Extensions -> Extension Manager</li>
                         <li>Under 'Upload Package File' Point the downloaded package and click Upload & Install</li>
-                        <li>After installation setup a <a data-uk-smooth-scroll href="#module-setup">Module</a> or <a data-uk-smooth-scroll href="#menu-album-setup">Menu Item</a></li>
+                        <li>After installation setup a <a data-uk-smooth-scroll href="#module-setup">Module</a></li>
                     </ol>
                 </td>
             </tr>
@@ -43,37 +43,11 @@
                 <td>
                     <strong id="module-setup">Module Setup: Album Only (Joomla 2.5.x & Joomla 3.x)</strong>
                     <ol>
-                        <li>Go to Admin area -> Extensions -> Module Manager</li>
-                        <li>Search/Filter for JUserTube to find the module or from 'Select Type' dropdown choose the type 'JUserTube' to list all the instance of JUserTube</li>
-                        <li>OR click New and under 'Select a Module Type:' select JUserTube to add a new instance of the module</li>
+                        <li>Go to Admin area -> Extensions -> Module Manager.</li>
+                        <li>Search/Filter for Srizon Tag to find the module or from 'Select Type' dropdown choose the type 'Srizon Tag' to list all the instance of Srizon Tag</li>
+                        <li>OR click New and under 'Select a Module Type:' select Srizon Tag to add a new instance of the module</li>
                         <li>Set the Details and Menu Assignment like any other module.</li>
-                        <li>Set the parameters of the module. Most important parameter is YouTube channle or playlist ID.
-                            <a data-uk-smooth-scroll href="#video-source-setup">(click here to see how to get it)</a></li>
-                    </ol>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <strong id="menu-album-setup">Menu Item (Joomla 2.5.x & Joomla 3.x)</strong>
-                    <ol>
-                        <li>Go to Admin area -> Menus -> Select the menu where you want to add the new menu item</li>
-                        <li>Click 'New'</li>
-                        <li>Click Select beside Menu Item Type</li>
-                        <li>From The 'Select a Menu Item Type:' popup Locate and click 'JUserTube - Fullpage' or 'JUserTube - Vertical with Description'</li>
-                        <li>Set the Details like any other menu.</li>
-                        <li>Set JUserTube related parameters from 'Advanced Options' tab. (Joomla 3.x)</li>
-                        <li>Most important parameter is YouTube channle or playlist ID.
-                            <a data-uk-smooth-scroll href="#video-source-setup">(click here to see how to get it)</a></li>
-                    </ol>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <strong id="video-source-setup">Video Source Setup</strong>
-                    <ol>
-                        <li>First you need to select 'Video Source' from the drop-down. For first 3 options you need to enter a channel/user id. For 4th option you need to enter a playlist id</li>
-                        <li>If the URL (link) of your channel is <pre>http://www.youtube.com/trailers</pre> or <pre>http://www.youtube.com/user/trailers</pre> then your user/channel id is <pre>trailers</pre></li>
-                        <li>If the URL (link) for the playlist is <pre>https://www.youtube.com/playlist?list=PLjCq3Gx18tZvfcwjy7ZwGjrX7X5m41vpv</pre> then the playlist id is <pre>PLjCq3Gx18tZvfcwjy7ZwGjrX7X5m41vpv</pre></li>
+                        <li>Set the parameters of the module.</li>
                     </ol>
                 </td>
             </tr>
@@ -96,20 +70,14 @@
             </tr>
             <tr>
                 <td>
-                    <strong>Setup Ok but Module/Menu is not showing anything or error message</strong>
-                    <p>Test your server's compatibility with server testing module. Also check if you've entered proper channel id or playlist id and selection for playlist/channel match with your id</p>
+                    <strong>Setup Ok. But nothing show on the frontend</strong>
+                    <p>Make Sure there's no JavaScripit error. It's required that you have a JavaScript error free frontend or the module may not work</p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <strong>Playlist is not sorting according to my selection</strong>
-                    <p>You need to wait for the next re-sync or do a manual re-sync</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <strong>Lightbox and/or Slider is not working</strong>
-                    <p>Most probably a JavaScript error occurred due to another extension or your template. Make sure your frontend is JavaScript error free. In a plug and play system it's important to check for JavaScript error after installation of each extension. You'll have to disable the conflicting extension if you're not able to resolve the conflict. </p>
+                    <strong>How to show a tag without any link</strong>
+                    <p>If you keep link field empty it will invoke a search. Put # on the link field to disable any linking</p>
                 </td>
             </tr>
             </tbody>

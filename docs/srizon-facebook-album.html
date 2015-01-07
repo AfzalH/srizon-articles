@@ -30,58 +30,57 @@
             <tbody>
             <tr>
                 <td>
-                    <strong id="installation">Installation (Joomla 2.5.x and 3.x)</strong>
+                    <strong id="installation">Installation (Free Version)</strong>
+                    <p>Method 1:</p>
                     <ol>
-                        <li>Login to admin area</li>
-                        <li>Go to -> Extensions -> Extension Manager</li>
-                        <li>Under 'Upload Package File' Point the downloaded package and click Upload & Install</li>
-                        <li>After installation setup a <a data-uk-smooth-scroll href="#module-setup">Module</a> or Menu Item (
-                            <a data-uk-smooth-scroll href="#menu-album-setup">Album</a> or <a data-uk-smooth-scroll href="#menu-gallery-setup">Gallery</a> )</li>
+                        <li>Login to your WordPress Admin</li>
+                        <li>Go to Plugins Menu and click Add New</li>
+                        <li>Search with the word 'srizon' and you'll see all our plugins</li>
+                        <li>Install and Activate</li>
+                    </ol>
+                    <p>Method 2:</p>
+                    <ol>
+                        <li>Download the zip and up-zip it</li>
+                        <li>Upload srizon-facebook-album folder to the /wp-content/plugins/ directory</li>
+                        <li>Activate the plugin through the 'Plugins' menu in WordPress</li>
+                    </ol>
+                    <p>Method 3:</p>
+                    <ol>
+                        <li>Download the zip</li>
+                        <li>Go to Plugins menu from your WordPress admin</li>
+                        <li>Click Add New and select upload option</li>
+                        <li>Upload, Install and Activate</li>
                     </ol>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <strong id="module-setup">Module Setup: Album Only (Joomla 2.5.x & Joomla 3.x)</strong>
-                    <ol>
-                        <li>Go to Admin area -> Extensions -> Module Manager.</li>
-                        <li>Search/Filter for JFBAlbum to find the module (This won't work if you change the module title).</li>
-                        <li>OR from 'Select Type' dropdown choose the type 'JFBAlbum' to list all the instance of JFBAlbum.</li>
-                        <li>OR click New and under 'Select a Module Type:' select JFBAlbum to add a new instance of the module.</li>
-                        <li>Set the Details and Menu Assignment like any other module.</li>
-                        <li>Set the parameters of the module.</li>
-                        <li>Set The AlbumIDs (<a data-uk-smooth-scroll href="#getting-album-id">How to get?</a>) and other parameters.</li>
-                    </ol>
+                    <strong id="installation-pro">Installation (Pro Version)</strong>
+                    <p>Deactivate and delete the free version and install using Method 2 or 3 above</p>
                 </td>
             </tr>
+
             <tr>
                 <td>
-                    <strong id="menu-album-setup">Album (Menu Item) Setup (Joomla 2.5.x & Joomla 3.x)</strong>
+                    <strong id="album-setup">Setting Up an Album</strong>
                     <ol>
-                        <li>Go to Admin area -> Menus -> Select the menu where you want to add the new menu item.</li>
-                        <li>Click 'New'.</li>
-                        <li>Click Select beside Menu Item Type.</li>
-                        <li>From The 'Select a Menu Item Type:' popup Locate and click 'JFBAlbum - Fullpage'.</li>
-                        <li>Set the Details like any other menu.</li>
-                        <li>Set the parameters of the menu (Joomla 2.5.x).</li>
-                        <li>Set JFBAlbum related parameters from 'Advanced Options' tab (Joomla 3.x).</li>
+                        <li>Go to your WordPress admin and click on the menu 'FB Album' and then click on 'Albums'</li>
+                        <li>Click on Add New</li>
                         <li>Set The Album IDs (<a data-uk-smooth-scroll href="#getting-album-id">How to get?</a>) and other parameters.</li>
+                        <li>Save and Go back to album listing to get the shortcode</li>
+                        <li>Copy the shortcode and paste into a page/post</li>
                     </ol>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <strong id="menu-gallery-setup">Gallery (Menu Item) Setup (Joomla 2.5.x & Joomla 3.x)</strong>
-                    <p>Gallery view is a 2 level view for albums (just like facebook photos page). It works only with public fan.</p>
+                    <strong id="gallery-setup">Setting Up a Gallery</strong>
                     <ol>
-                        <li>Go to Admin area -> Menus -> Select the menu where you want to add the new menu item.</li>
-                        <li>Click 'New'.</li>
-                        <li>Click Select beside Menu Item Type.</li>
-                        <li>From The 'Select a Menu Item Type:' popup Locate and click 'JFBAlbum - Gallery'.</li>
-                        <li>Set the Details like any other menu.</li>
-                        <li>Set the parameters of the menu (Joomla 2.5.x).</li>
-                        <li>Set JFBAlbum related parameters from 'Advanced Options' tab (Joomla 3.x).</li>
+                        <li>Go to your WordPress admin and click on the menu 'FB Album' and then click on 'Galleries'</li>
+                        <li>Click on Add New</li>
                         <li>Set the PageID (<a data-uk-smooth-scroll href="#getting-page-id">How to get?</a>) and other parameters.</li>
+                        <li>Save and Go back to album listing to get the shortcode</li>
+                        <li>Copy the shortcode and paste into a page/post</li>
                     </ol>
                 </td>
             </tr>
@@ -121,46 +120,14 @@
             <tbody>
             <tr>
                 <td>
-                    <strong>Installation Failed</strong>
-                    <p>Make Sure the directory permissions are ok</p>
+                    <strong>Setup Ok but the shortcode is not showing anything</strong>
+                    <p>Your server may not be compatible for using Facebook API. Ask your hosting admin to enable remote connectivity features of PHP (for example allow_url_fopen or cURL library)</p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <strong>Setup Ok. But nothing show on the frontend</strong>
-                    <p>Make Sure all of the following are checked</p>
-                    <ol>
-                        <li>You already tested your target server/site with the server test module</li>
-                        <li>The album id or page id is from a public page on Facebook (not a personal profile where you add friend or a group)</li>
-                        <li>Your page is published</li>
-                        <li>Your page doesn't have any country/age restriction</li>
-                        <li>Your page isn't categorized under alcohol/nightclub etc adult category</li>
-                    </ol>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <strong>Lightbox and/or Slider is not working</strong>
+                    <strong>Lightbox is not working</strong>
                     <p>Most probably a JavaScript error occurred due to another extension or your template. Make sure your frontend is JavaScript error free. In a plug and play system it's important to check for JavaScript error after installation of each extension. You'll have to disable the conflicting extension if you're not able to resolve the conflict. </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <strong>I just updated something on Facebook a album but it's not showing on my site</strong>
-                    You need to wait for the next sync. Sync interval can be adjusted from the backend parameter. You can also do a force re-sync to see immediate result (admin menu->components->jfbalbum->sync now)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <strong>How to remove restrictions from a Facebook Page</strong>
-                    <ol>
-                        <li>visit the facebook page as an admin user</li>
-                        <li>click edit page -> edit settings</li>
-                        <li>remove any restrictions (age / country etc)</li>
-                        <li>if the page is categorized under bar / alcohol related then remove as well</li>
-                        <li>after saving the changes try to load your page as 'logged-out' user (without loggin in) if it loads then it's ready</li>
-                        <li>force re-sync (admin menu->components->jfbalbum->sync now)</li>
-                    </ol>
                 </td>
             </tr>
             </tbody>
