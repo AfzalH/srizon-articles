@@ -1,0 +1,119 @@
+<div class="product-buttons uk-clearfix">
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-n"><span class="uk-icon-book"></span> &nbsp;Learn More</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-s"><span class="uk-icon-eye"></span> &nbsp;View Demo</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-o"><span class="uk-icon-shopping-cart"></span> &nbsp;Purchase It</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-i"><span class="uk-icon-envelope"></span> &nbsp;Contact</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-s"><span class="uk-icon-download"></span> &nbsp;Download</a>
+    </div>
+    <div class="srz-width-1-4">
+        <a href="#" class="uk-button button-srizon-i"><span class="uk-icon-bullhorn"></span> &nbsp;Review</a>
+    </div>
+</div>
+<div class="uk-grid">
+    <h3>First Go through this doc for any clarification or issue. If this doesn't help then contact us.</h3>
+
+    <div class="uk-width-medium-1-2">
+        <p></p>
+        <h4>Installation/Setup Related</h4>
+        <input type="text" id="ins-search" value="" class="form-control uk-width-1-1 table-filter"
+               placeholder="Type to filter">
+        <table class="installation table table-bordered">
+            <tbody>
+            <tr>
+                <td>
+                    <strong id="installation">Installation (Joomla 2.5.x and 3.x)</strong>
+                    <ol>
+                        <li>Login to admin area</li>
+                        <li>Go to -> Extensions -> Extension Manager</li>
+                        <li>Under 'Upload Package File' Point the downloaded package and click Upload & Install</li>
+                        <li>After installation setup a <a data-uk-smooth-scroll href="#module-setup">Module</a></li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong id="module-setup">Module Setup: Album Only (Joomla 2.5.x & Joomla 3.x)</strong>
+                    <ol>
+                        <li>Go to Admin area -> Extensions -> Module Manager.</li>
+                        <li>Search/Filter for Srizon Tag to find the module or from 'Select Type' dropdown choose the type 'Srizon Tag' to list all the instance of Srizon Tag</li>
+                        <li>OR click New and under 'Select a Module Type:' select Srizon Tag to add a new instance of the module</li>
+                        <li>Set the Details and Menu Assignment like any other module.</li>
+                        <li>Set the parameters of the module.</li>
+                    </ol>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p></p>
+    </div>
+    <div class="uk-width-medium-1-2">
+        <p></p>
+        <h4>Troubleshooting Related</h4>
+        <input type="text" id="trouble-search" value="" class="form-control uk-width-1-1 table-filter"
+               placeholder="Type to filter">
+        <table class="troubleshoot table table-bordered">
+            <tbody>
+            <tr>
+                <td>
+                    <strong>Installation Failed</strong>
+                    <p>Make Sure the directory permissions are ok</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Setup Ok. But nothing show on the frontend</strong>
+                    <p>Make Sure there's no JavaScripit error. It's required that you have a JavaScript error free frontend or the module may not work</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>How to show a tag without any link</strong>
+                    <p>If you keep link field empty it will invoke a search. Put # on the link field to disable any linking</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p></p>
+    </div>
+
+</div>
+<script>
+    jQuery(document).ready(function () {
+
+        jQuery('.installation').searchable({
+            striped: true,
+            searchField: '#ins-search',
+            searchType: 'default',
+            childSelector: 'td',
+            show: function (elem) {
+                elem.fadeIn(300);
+            },
+            hide: function (elem) {
+                elem.fadeOut(300);
+            }
+        });
+
+        jQuery('.troubleshoot').searchable({
+            striped: true,
+            searchField: '#trouble-search',
+            searchType: 'default',
+            childSelector: 'td',
+            show: function (elem) {
+                elem.fadeIn(300);
+            },
+            hide: function (elem) {
+                elem.fadeOut(300);
+            }
+        });
+
+    });
+</script>

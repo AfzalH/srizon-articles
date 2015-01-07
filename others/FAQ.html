@@ -1,0 +1,104 @@
+<div class="uk-grid">
+    <div class="uk-width-medium-1-2">
+        <h3>
+            Have a question? See if it's already answered:
+        </h3>
+
+        <p></p>
+    </div>
+    <div class="uk-width-medium-1-1">
+        <input type="text" id="jus-search" value="" class="form-control uk-width-1-1 table-filter"
+               placeholder="Type to filter">
+        <table class="faqs table table-striped table-bordered">
+            <tbody>
+            <tr class="headerrow">
+                <th width="40%" scope="row"><h4>Question</h4></th>
+                <th width="60%" scope="row"><h4>Answer</h4></th>
+            </tr>
+            <tr>
+                <th scope="row">Who are you guys?</th>
+                <td>Just a bunch of Software Engineers and IT guys helping you out. We're here to facilitate the use of
+                    the existing open source technologies to fit your needs. We also provide and sell some Joomla and
+                    WordPress extensions and plugins to make your web development a bit easier
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">We'd like to hire you for a job. How do we contact?</th>
+                <td>Just send us an email by clicking the envelop icon at the top right corner of this site</td>
+            </tr>
+            <tr>
+                <th scope="row">How much do you charge for your services?</th>
+                <td>Not much. Around $20 per man-hour (varies according to the type). We can also work on project basis
+                    (milestone basis for large projects)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">How much do you charge for your products?</th>
+                <td>Some are free. Some are paid. Price ranges from $15 to $20 for different products. Click the purchase button for a certain product to see the price of that product.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Which payment method do you support?</th>
+                <td>For purchasing any of our product you can use Credit Card or Paypal. However, for paying us for a service or project you can use your credit card, Skrill (formerly Moneybookers), wire transfer or ACH (USA clients). Details will be sent on invoice.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">How do you deliver the purchased products?</th>
+                <td>We receive payment for products via PayPro. They handle the transactions and delivery of each
+                    products. However, you may contact us directly if need be. We'll send it via direct email.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">I've just purchased a product but didn't receive any download link!</th>
+                <td>PayPro (our partner for transaction and delivery) manually review each order before confirming. It
+                    usually takes a few minutes but may take longer if the transaction seems suspicious. They may ask
+                    for confirmation over the phone number your provided. On example of suspicious transaction is where
+                    your country doesn't match your IP address
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">What's your refund policy?</th>
+                <td>See our <a href="/refund-policy">Refund Policy</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">How long do I get free support</th>
+                <td>1 year after your purchase for one website. For additional time/website you may have to pay.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">How long do I get free update?</th>
+                <td>1 year. You may have to purchase again if you need update after 1 year. However, you can use the purchased version indefinitely
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Can I use a product on multiple website?</th>
+                <td>Yes. But you'll get free support for one website.
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Under which license do you distribute your products?</th>
+                <td>GNU GPL V2
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    jQuery(document).ready(function () {
+        jQuery('.faqs').searchable({
+            striped: true,
+            searchField: '#jus-search',
+            searchType: 'default',
+            selector: 'tbody tr:not(.headerrow)',
+            childSelector: 'th, td',
+            show: function (elem) {
+                elem.fadeIn(300);
+            },
+            hide: function (elem) {
+                elem.fadeOut(300);
+            }
+        });
+    });
+</script>
