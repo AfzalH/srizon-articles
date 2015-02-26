@@ -17,7 +17,11 @@
                         <li>Under 'Upload Package File' Point the downloaded package and click Upload & Install.</li>
                         <li>After installation setup a <a data-uk-smooth-scroll href="#module-setup">Module</a> or Menu Item (
                             <a data-uk-smooth-scroll href="#menu-album-setup">Album</a> or <a data-uk-smooth-scroll href="#menu-gallery-setup">Gallery</a> ).</li>
-                        <li>If you're upgrading from an older version to version 4.1, you'll also have to remove 'JFBAlbum resource loader' plugin</li>
+                        <li>If you're upgrading from an older version to version 4.1, you'll also have to remove 'JFBAlbum resource loader' plugin (Also uninstall the JFBAlbum component and JFBAlbum module for a cleaner install)</li>
+                        <li>On some server it may not show anything without app id and secret. You can simply create an app from
+                            <a target="_blank" href="http://developers.facebook.com">Facebook Developers</a> to get app id and secret. After getting them put it on appropriate fields for each album/gallery parameters (module+menu item)</li>
+                        <li>If you see any javascript error after installing this, That's probably a jQuery problem which can easily be solved by <a target="_blank"
+                                                                                                                                                     href="http://extensions.joomla.org/extensions/extension/core-enhancements/performance/jquery-easy">jQuery Easy plugin</a> or 'SrizonModifier' plugin (provided with this package). Also you can <a href="/contact">Send us an email</a> with admin access. We'll fix it for you.</li>
                     </ol>
                 </td>
             </tr>
@@ -108,34 +112,30 @@
             </tr>
             <tr>
                 <td>
-                    <strong>Setup Ok. But nothing show on the frontend</strong>
-                    <p>Make Sure all of the following are checked:</p>
+                    <strong>Setup Ok. But nothing shows on the frontend or the layout/lightbox is broken</strong>
+                    <p><em>Hard Way:</em> Make Sure all of the following are checked:</p>
                     <ol>
                         <li>You already tested your target server/site with the server test module.</li>
                         <li>The album id or page id is from a public page on Facebook (not a personal profile where you add friend or a group).</li>
                         <li>Your page is published.</li>
-                        <li>Your page doesn't have any country/age restriction.</li>
+                        <li>Your page doesn't have any country/age restriction. (<a href="#remove-restriction">See how to fix</a>)</li>
                         <li>Your page isn't categorized under alcohol/nightclub etc adult category.</li>
-                        <li>There's no javascript error on your page. If there is, 99% time it can be solved using <a
+                        <li>There's no javascript error on your page (most likely to happen on J 2.5.x). If there is, 99% time it can be solved using <a target="_blank"
                                 href="http://extensions.joomla.org/extensions/extension/core-enhancements/performance/jquery-easy">jQuery Easy plugin</a></li>
+                        <li>There's also a plugin called 'srizonmodifier' included with this package which is able to add/remove lines of codes and help solving duplicated jQuery issue. Use that if necessary</li>
                     </ol>
+                    <p><em>Easy Way:</em> <a href="/contact">Send us an email</a> with admin access, menu link to the album page and facebook page/album link</p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <strong>Lightbox and/or Slider is not working</strong>
-                    <p>Most probably a JavaScript error occurred due to another extension or your template. Make sure your frontend is JavaScript error free. In a plug and play system it's important to check for JavaScript error after installation of each extension. You'll have to disable the conflicting extension if you're not able to resolve the conflict. </p>
+                    <strong>I just updated something on Facebook album but it's not updating on my site</strong>
+                   <p> You need to wait for the next sync. Sync interval can be adjusted from the backend parameter. You can also do a force re-sync to see immediate result by deleting Joomla cache.</p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <strong>I just updated something on Facebook album but it's not showing on my site</strong>
-                   <p> You need to wait for the next sync. Sync interval can be adjusted from the backend parameter. You can also do a force re-sync to see immediate result (admin menu->components->jfbalbum->sync now).</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <strong>How to remove restrictions from a Facebook Page</strong>
+                    <strong id="remove-restriction">How to remove restrictions from a Facebook Page</strong>
                     <ol>
                         <li>Visit the facebook page as an admin user.</li>
                         <li>Click edit page -> edit settings.</li>
