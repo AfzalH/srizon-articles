@@ -46,20 +46,18 @@
                     <ol>
                         <li>Go to your WordPress admin and click on the menu 'YouTube Album'.</li>
                         <li>Click on Add New and fill out different parameters.</li>
-                        <li>Most important parameter is YouTube channle or playlist ID.
-                            <a data-uk-smooth-scroll href="#video-source-setup">(click here to see how to get it)</a></li>
-                        <li>Save and Go back to album listing to get the shortcode.</li>
-                        <li>Copy the shortcode and paste into a page/post.</li>
+                        <li>Save and Go back to album listing to get the short-code.</li>
+                        <li>Copy the short-code and paste into a page/post.</li>
                     </ol>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <strong id="video-source-setup">Video Source Setup</strong>
-                    <ol>
-                        <li>If the URL (link) of your channel is <pre>http://www.youtube.com/trailers</pre> or <pre>http://www.youtube.com/user/trailers</pre> then your user/channel id is <pre>trailers</pre></li>
-                        <li>If the URL (link) for the playlist (Pro Only) is <pre>https://www.youtube.com/playlist?list=PLjCq3Gx18tZvfcwjy7ZwGjrX7X5m41vpv</pre> then the playlist id is <pre>PLjCq3Gx18tZvfcwjy7ZwGjrX7X5m41vpv</pre></li>
-                    </ol>
+                    <strong id="video-source-setup">Channel/User/Playlist URL</strong>
+                    <p>URL format should be line one of these:</p>
+                    <pre>http://www.youtube.com/user/trailers</pre>
+                    <pre>https://www.youtube.com/playlist?list=PLjCq3Gx18tZvfcwjy7ZwGjrX7X5m41vpv (pro version only)</pre>
+                    <pre>https://www.youtube.com/channel/UCvC4D8onUfXzvjTOM-dBfEA</pre>
                 </td>
             </tr>
             <tr>
@@ -109,12 +107,6 @@
                 <td>
                     <strong>Setup Ok but the shortcode is not showing anything</strong>
                     <p>Your server may not be compatible for using YouTube API. Ask your hosting admin to enable remote connectivity features of PHP (for example allow_url_fopen or cURL library).</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <strong>Playlist is not sorting according to my selection (pro version)</strong>
-                    <p>You need to wait for the next re-sync or do a manual re-sync.</p>
                 </td>
             </tr>
             <tr>
