@@ -112,6 +112,22 @@
             </tr>
             <tr>
                 <td>
+                    <strong id="appid">Only 100 or No Images Showing</strong>
+                    <p>It seems that since few days facebook refuse to give more than 100 images (or no images) if you don't use an app id/secret. For now you can use the following app id and secret <strong>but do create your own</strong>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=w_lLRt4wY70">Here's How</a></p>
+                    <pre>
+id:
+177197009081544
+secret:
+64a6d7830db5893985cbe0475ce5a9db
+                    </pre>
+                    <p>For Menu Items: Enter these values on 'Other Options' Tab -> 'Facebook App Info' Section</p>
+                    <p>For Module: Enter these values on 'Advanced' Tab -> 'Facebook App Info' Section</p>
+                    <p>And don't forget to <strong>Clear Joomla Cache</strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <strong>Setup Ok. But nothing shows on the frontend or the layout/lightbox is broken</strong>
                     <p><em>Hard Way:</em> Make Sure all of the following are checked:</p>
                     <ol>
@@ -121,7 +137,7 @@
                         <li>Your page doesn't have any country/age restriction. (<a href="#remove-restriction">See how to fix</a>)</li>
                         <li>Your page isn't categorized under alcohol/nightclub etc adult category.</li>
                         <li>There's no javascript error on your page (most likely to happen on J 2.5.x). If there is, 99% time it can be solved using <a target="_blank"
-                                href="http://extensions.joomla.org/extensions/extension/core-enhancements/performance/jquery-easy">jQuery Easy plugin</a></li>
+                                                                                                                                                         href="http://extensions.joomla.org/extensions/extension/core-enhancements/performance/jquery-easy">jQuery Easy plugin</a></li>
                         <li>There's also a plugin called 'srizonmodifier' included with this package which is able to add/remove lines of codes and help solving duplicated jQuery issue. Use that if necessary</li>
                     </ol>
                     <p><em>Easy Way:</em> <a href="/contact">Send us an email</a> with admin access, menu link to the album page and facebook page/album link</p>
@@ -130,7 +146,7 @@
             <tr>
                 <td>
                     <strong>I just updated something on Facebook album but it's not updating on my site</strong>
-                   <p> You need to wait for the next sync. Sync interval can be adjusted from the backend parameter. You can also do a force re-sync to see immediate result by deleting Joomla cache.</p>
+                    <p> You need to wait for the next sync. Sync interval can be adjusted from the backend parameter. You can also do a force re-sync to see immediate result by deleting Joomla cache.</p>
                 </td>
             </tr>
             <tr>
@@ -142,7 +158,7 @@
                         <li>Remove any restrictions (age / country etc).</li>
                         <li>If the page is categorized under bar / alcohol related then remove as well.</li>
                         <li>After saving the changes try to load your page as 'logged-out' user (without loggin in) if it loads then it's ready.</li>
-                        <li>Force re-sync (admin menu->components->jfbalbum->sync now).</li>
+                        <li>Force re-sync by deleting JFBAlbum Cache</li>
                     </ol>
                 </td>
             </tr>
