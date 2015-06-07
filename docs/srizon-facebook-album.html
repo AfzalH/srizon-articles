@@ -122,52 +122,6 @@
             </tr>
             <tr>
                 <td>
-                    <strong id="appid">Only 100 or No Images Showing</strong>
-                    <p>It seems that since few days facebook refuse to give more than 100 images (or no images) if you don't use an app id/secret. For now you can use the following app id and secret <strong>but do create your own</strong>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=w_lLRt4wY70">Here's How</a></p>
-                    <pre>
-id:
-177197009081544
-secret:
-64a6d7830db5893985cbe0475ce5a9db
-                    </pre>
-                    <p>From FB Album Backend (admin) open the Gallery or Album to edit. Put the values for app id/secret</p>
-                    <p>And don't forget to <strong>Re-sync</strong></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <strong id="hashlinks">Pagination and 'Back to Gallery' links are not working</strong>
-                    <p>Those links are designed to take you directly to the album/gallery area with a #albumid appended to the link. Some smooth scroll scripts seems to block the normal behaviour of such link and just scrolls it to the #albumid area. So you can do one of the following</p>
-                    <ol>
-                        <li>Change the smooth scroll script</li>
-                        <li>Change some code in 'Srizon Facebook Album' plugin as described below</li>
-                    </ol>
-                    <p><strong>Change needed for 'Back to gallery' link:</strong> Open the file <em>tmpl/gallery.php</em> and change the following line of code (line 7)</p>
-                    <pre>$blink = $url.'#'.$scroller_id;</pre>
-                    <p>to</p>
-                    <pre>$blink = $url;</pre>
-
-                    <p><strong>Change needed for Pagination links:</strong> Open the file <em>lib/srizon_functions.php</em> and change the following lines of code (line 48-52)</p>
-                    <pre>
-if (strpos($url, '?')) {
-    return $paginator->page_links($url . '&', '#' . $scroller_id);
-} else {
-    return $paginator->page_links($url . '?', '#' . $scroller_id);
-}
-                    </pre>
-                    <p>to</p>
-                    <pre>
-if (strpos($url, '?')) {
-    return $paginator->page_links($url . '&');
-} else {
-    return $paginator->page_links($url . '?');
-}
-                    </pre>
-                </td>
-            </tr>
-            <tr>
-                <td>
                     <strong id="remove-restriction">How to remove restrictions from a Facebook Page</strong>
                     <ol>
                         <li>Visit the facebook page as an admin user.</li>
